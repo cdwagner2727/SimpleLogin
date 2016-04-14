@@ -1,0 +1,30 @@
+﻿@model SimpleLogin.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+
+<body>
+    <div> 
+        @using (Html.BeginForm("Submit", "Register", FormMethod.Post))
+        {
+            <i>First Name: </i>@Html.TextBoxFor(n => n.FirstName)<br /><span>@Html.ValidationMessageFor(n => n.FirstName)</span><br />
+            <i>Last Name:  </i>@Html.TextBoxFor(n => n.LastName)<br /><span>@Html.ValidationMessageFor(n => n.LastName)</span><br />
+            <i>Username:   </i>@Html.TextBoxFor(u => u.Username)<br /><span>@Html.ValidationMessageFor(u => u.Username)</span><br />
+            <i>Password:   </i>@Html.TextBoxFor(p => p.Password)<br /><span>@Html.ValidationMessageFor(p => p.Password)</span><br />
+            <input id="Submit1" type="submit" value="submit" />
+        }
+    </div>
+</body>
+</html>

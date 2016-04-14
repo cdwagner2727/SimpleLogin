@@ -1,0 +1,40 @@
+﻿@model SimpleLogin.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewUserSummary</title>
+</head>
+<body>
+    <div> 
+        You did it, @Model.FirstName, you have successfully registered the username @Model.Username!!<br />
+        <br />
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td>@Model.Username</td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>@Model.FirstName</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>@Model.LastName</td>
+            </tr>
+            <tr>
+                <td>Joined:</td>
+                <td>@Model.Joined</td>
+            </tr>
+
+        </table>
+
+    </div>
+</body>
+</html>
