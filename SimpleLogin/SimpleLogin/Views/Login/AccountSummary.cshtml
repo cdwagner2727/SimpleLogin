@@ -9,31 +9,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>NewUserSummary</title>
+    <title>AccountSummary</title>
 </head>
 <body>
     <div> 
-        You did it, @Model.FirstName, you have successfully registered the username @Model.Username!!<br />
-        <br />
+        <div id="logout_div">@Html.ActionLink("Logout", "Logout", "Login")</div>
         <table>
             <tr>
                 <td>Username:</td>
                 <td>@Model.Username</td>
+                <td>Edit</td>
             </tr>
             <tr>
                 <td>First Name:</td>
                 <td>@Model.FirstName</td>
+                <td>Edit</td>
             </tr>
             <tr>
                 <td>Last Name:</td>
                 <td>@Model.LastName</td>
+                <td>Edit</td>
             </tr>
             <tr>
                 <td>Joined:</td>
                 <td>@Model.Joined</td>
             </tr>
         </table>
-
     </div>
 </body>
 </html>

@@ -29,5 +29,24 @@ namespace SimpleLogin.DAL
                 return true;
             }
         }
+
+        public User GetUserByUsername(string username) 
+        {
+            return this.Users.First(n => n.Username == username);
+        }
+
+        public bool IsValid(string username, string password)
+        {
+            bool isValid = false;
+            if (this.Users.Any(x => x.Username == username))
+            {
+                User x = this.Users.First(n => n.Username == username);
+                if (x.Password == password)
+                {
+                    isValid = true;
+                }
+            }
+            return isValid;
+        }
     }
 }

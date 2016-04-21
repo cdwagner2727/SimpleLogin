@@ -8,17 +8,17 @@ namespace SimpleLogin.Models
 {
     public class User
     {
-        [Required]
+        [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
-        
-        [Required]
+
+        [Required, Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Username")]
         [Key]
         public string Username { get; set; }
-        
-        [Required]
+
+        [Required, Display(Name = "Password")]
         public string Password { get; set; }
 
         public string Joined { get; set; }
